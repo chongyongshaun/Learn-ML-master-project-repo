@@ -82,3 +82,10 @@ svm_model.fit(X_train, y_train)
 
 y_pred_svm = svm_model.predict(X_test)
 print("SVM Classification Report:\n", classification_report(y_test, y_pred_svm))
+
+#naive bayes Classifier
+from sklearn.naive_bayes import GaussianNB
+nb_model = GaussianNB()
+nb_model.fit(X_train, y_train)
+y_pred_nb = nb_model.predict(X_test)
+print("Naive Bayes Classification Report:\n", classification_report(y_test, y_pred_nb))
