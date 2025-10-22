@@ -89,3 +89,10 @@ nb_model = GaussianNB()
 nb_model.fit(X_train, y_train)
 y_pred_nb = nb_model.predict(X_test)
 print("Naive Bayes Classification Report:\n", classification_report(y_test, y_pred_nb))
+
+#logistic regression Classifier
+from sklearn.linear_model import LogisticRegression
+LrModel = LogisticRegression()
+LrModel.fit(X_train, y_train)
+y_pred_Lr = LrModel.predict(X_test)
+print("Logistic Regression Classification Report:\n", classification_report(y_test, y_pred_Lr))
